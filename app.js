@@ -6,12 +6,15 @@ let userChoice
 let computerChoice
 let result
 
+// providing user choice
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
     userChoice = e.target.id
     userChoiceDisplay.innerHTML = userChoice;
     generateComputerChoice()
     getResult()
 }))
+
+// Generating computer choice
 
 const generateComputerChoice = () => {
     const randomNumber = Math.floor(Math.random() * possibleChoices.length) + 1
@@ -28,6 +31,8 @@ const generateComputerChoice = () => {
 
     computerChoiceDisplay.innerHTML = computerChoice
 }
+
+// finding result
 
 const getResult = () => {
     if (computerChoice === userChoice) {
@@ -51,7 +56,5 @@ const getResult = () => {
     if (computerChoice === 'scissors' && userChoice === 'rock') {
         result = 'you won!'
     }
-    console.log(result);
-
     resultDisplay.innerHTML = result;
 }
