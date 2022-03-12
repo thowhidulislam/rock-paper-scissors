@@ -1,0 +1,7 @@
+/* centering the contents */
+.contents {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+} 
+
